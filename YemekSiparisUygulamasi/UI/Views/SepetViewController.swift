@@ -5,8 +5,10 @@
 //  Created by Kaan Uzun on 21.05.2024.
 //
 
+import Lottie
 import Kingfisher
 import UIKit
+import RxSwift
 
 class SepetViewController: UIViewController {
     
@@ -16,14 +18,17 @@ class SepetViewController: UIViewController {
     var viewModel = SepetViewModel()
     let kullanici_adi = "Kaan_Uzun"
     
+    var isOrderCompleted: Bool = false
+    
     lazy var placeholderLabel: UILabel = {
         let label = UILabel()
-        label.text = "No items in your cart"
+        label.text = "Sepette Ürün Yok"
         label.textAlignment = .center
         label.textColor = .gray
         return label
     }()
     
+    var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +58,46 @@ class SepetViewController: UIViewController {
     
     
     @IBAction func btnSiparisiTamamla(_ sender: Any) {
+        // Load the animation from the JSON file
+        animationView = LottieAnimationView(name: "OrderB")
+        animationView?.frame = view.bounds
+        animationView?.contentMode = .scaleAspectFit
+        animationView?.loopMode = .playOnce
         
+        // Disable the button during the animation
+        (sender as? UIButton)?.isEnabled = false
+        
+        // Add animationView to the view hierarchy
+        if let animationView = animationView {
+            view.addSubview(animationView)
+            animationView.play(completion: { _ in
+                // Remove animationView from superview after animation completes
+                animationView.removeFromSuperview()
+                
+                // Enable the button after the animation completes
+                (sender as? UIButton)?.isEnabled = true
+                // Set the flag to indicate that an order is completed
+                self.isOrderCompleted = true
+                
+                // Clear the sepetTableView by deleting all items from the database
+                for item in self.sepetYemeklerListesi {
+                    if let sepetYemekID = Int(item.sepet_yemek_id) {
+                        self.viewModel.sepettenSil(sepet_yemek_id: sepetYemekID, kullanici_adi: self.kullanici_adi)
+                    } else {
+                        print("Error: Cannot convert \(item.sepet_yemek_id) to Int")
+                    }
+                }
+                
+                // Clear the local array
+                self.sepetYemeklerListesi.removeAll()
+                // Reload the table view to reflect the changes
+                self.sepetTableView.reloadData()
+                // Update the total price
+                self.calculateTotalPrice()
+                // Update UI based on data
+                self.handleEmptyState()
+            })
+        }
     }
     
     func calculateTotalPrice() {
@@ -73,6 +117,7 @@ class SepetViewController: UIViewController {
     }
     
     func handleEmptyState() {
+        
         updateUIForEmptyState()
         sepetTableView.reloadData() // Reload table view to reflect changes
     }

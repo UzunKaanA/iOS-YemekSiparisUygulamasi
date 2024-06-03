@@ -21,6 +21,9 @@ class YemekDetayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.sepetYukle(kullanici_adi: kullanici_adi)
+        
         if let y = yemek {
             lblFiyat.text = "\(yemek!.yemek_fiyat) ₺"
             lblYemekAd.text = y.yemek_adi
@@ -35,7 +38,7 @@ class YemekDetayViewController: UIViewController {
 
     @IBAction func btnSepeteEkle(_ sender: Any) {
         if let yemek = yemek, let siparisAdet = Int(lblUrunCounter.text ?? "1") {
-                viewModel.sepetEkle(
+                viewModel.sepetEkleVeyaGuncelle(
                     yemek_adi: yemek.yemek_adi,
                     yemek_resim_adi: yemek.yemek_resim_adi,
                     yemek_fiyat: Int(yemek.yemek_fiyat)!,

@@ -18,6 +18,11 @@
 		9230C3DE2C012609006B0798 /* SepetCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230C3DD2C012609006B0798 /* SepetCevap.swift */; };
 		9230C3E02C0126A0006B0798 /* SepetYemekler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9230C3DF2C0126A0006B0798 /* SepetYemekler.swift */; };
 		92681A5D2C0094340012EC3D /* YemekDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92681A5C2C0094340012EC3D /* YemekDetayViewModel.swift */; };
+		928F0DCF2C0CA2400081ED3A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F0DCE2C0CA23F0081ED3A /* CustomTabBarController.swift */; };
+		928F0DD92C0CB3510081ED3A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 928F0DD82C0CB3510081ED3A /* Lottie */; };
+		928F0DDD2C0CB5850081ED3A /* OrderC.json in Resources */ = {isa = PBXBuildFile; fileRef = 928F0DDC2C0CB5850081ED3A /* OrderC.json */; };
+		928F0DDF2C0CB5BB0081ED3A /* Order.json in Resources */ = {isa = PBXBuildFile; fileRef = 928F0DDE2C0CB5BB0081ED3A /* Order.json */; };
+		928F0DE12C0CB5EA0081ED3A /* OrderB.json in Resources */ = {isa = PBXBuildFile; fileRef = 928F0DE02C0CB5E90081ED3A /* OrderB.json */; };
 		92AA59362BFFAA0F004DD1A7 /* YemekDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA59352BFFAA0F004DD1A7 /* YemekDetayViewController.swift */; };
 		92B951C62BFE858D006E33C5 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B951C52BFE858D006E33C5 /* YemeklerCevap.swift */; };
 		92B951CB2BFE8867006E33C5 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B951CA2BFE8867006E33C5 /* AnasayfaViewModel.swift */; };
@@ -45,6 +50,10 @@
 		9230C3DD2C012609006B0798 /* SepetCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetCevap.swift; sourceTree = "<group>"; };
 		9230C3DF2C0126A0006B0798 /* SepetYemekler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepetYemekler.swift; sourceTree = "<group>"; };
 		92681A5C2C0094340012EC3D /* YemekDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekDetayViewModel.swift; sourceTree = "<group>"; };
+		928F0DCE2C0CA23F0081ED3A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		928F0DDC2C0CB5850081ED3A /* OrderC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrderC.json; sourceTree = "<group>"; };
+		928F0DDE2C0CB5BB0081ED3A /* Order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Order.json; sourceTree = "<group>"; };
+		928F0DE02C0CB5E90081ED3A /* OrderB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OrderB.json; sourceTree = "<group>"; };
 		92AA59352BFFAA0F004DD1A7 /* YemekDetayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekDetayViewController.swift; sourceTree = "<group>"; };
 		92B951C52BFE858D006E33C5 /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
 		92B951CA2BFE8867006E33C5 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
@@ -63,6 +72,7 @@
 				92B951DD2BFE8E3F006E33C5 /* Kingfisher in Frameworks */,
 				92B951D72BFE8E1D006E33C5 /* RxSwift in Frameworks */,
 				92B951DA2BFE8E31006E33C5 /* Alamofire in Frameworks */,
+				928F0DD92C0CB3510081ED3A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,16 +99,25 @@
 		9217E24E2BFB9C2B00A6AD29 /* YemekSiparisUygulamasi */ = {
 			isa = PBXGroup;
 			children = (
-				9217E24F2BFB9C2B00A6AD29 /* AppDelegate.swift */,
-				9217E2512BFB9C2B00A6AD29 /* SceneDelegate.swift */,
+				928F0DD52C0CB1BD0081ED3A /* Assets */,
 				92B951C72BFE8847006E33C5 /* UI */,
 				92C4968E2BFD240200C15D40 /* Data */,
-				9217E2552BFB9C2B00A6AD29 /* Main.storyboard */,
-				9217E2582BFB9C2C00A6AD29 /* Assets.xcassets */,
-				9217E25A2BFB9C2C00A6AD29 /* LaunchScreen.storyboard */,
 				9217E25D2BFB9C2C00A6AD29 /* Info.plist */,
 			);
 			path = YemekSiparisUygulamasi;
+			sourceTree = "<group>";
+		};
+		928F0DD52C0CB1BD0081ED3A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9217E2552BFB9C2B00A6AD29 /* Main.storyboard */,
+				9217E25A2BFB9C2C00A6AD29 /* LaunchScreen.storyboard */,
+				9217E2582BFB9C2C00A6AD29 /* Assets.xcassets */,
+				928F0DDC2C0CB5850081ED3A /* OrderC.json */,
+				928F0DDE2C0CB5BB0081ED3A /* Order.json */,
+				928F0DE02C0CB5E90081ED3A /* OrderB.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		92B951C72BFE8847006E33C5 /* UI */ = {
@@ -143,6 +162,7 @@
 				9217E2532BFB9C2B00A6AD29 /* AnasayfaViewController.swift */,
 				92C496952BFD29E500C15D40 /* SepetViewController.swift */,
 				92AA59352BFFAA0F004DD1A7 /* YemekDetayViewController.swift */,
+				928F0DCE2C0CA23F0081ED3A /* CustomTabBarController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +172,8 @@
 			children = (
 				92C496902BFD243200C15D40 /* Entity */,
 				92C4968F2BFD240900C15D40 /* Repo */,
+				9217E24F2BFB9C2B00A6AD29 /* AppDelegate.swift */,
+				9217E2512BFB9C2B00A6AD29 /* SceneDelegate.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -196,6 +218,7 @@
 				92B951D62BFE8E1D006E33C5 /* RxSwift */,
 				92B951D92BFE8E31006E33C5 /* Alamofire */,
 				92B951DC2BFE8E3F006E33C5 /* Kingfisher */,
+				928F0DD82C0CB3510081ED3A /* Lottie */,
 			);
 			productName = YemekSiparisUygulamasi;
 			productReference = 9217E24C2BFB9C2B00A6AD29 /* YemekSiparisUygulamasi.app */;
@@ -229,6 +252,7 @@
 				92B951D22BFE8E0F006E33C5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				92B951D82BFE8E31006E33C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				92B951DB2BFE8E3F006E33C5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				928F0DD22C0CB1A00081ED3A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 9217E24D2BFB9C2B00A6AD29 /* Products */;
 			projectDirPath = "";
@@ -245,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9217E2592BFB9C2C00A6AD29 /* Assets.xcassets in Resources */,
+				928F0DDF2C0CB5BB0081ED3A /* Order.json in Resources */,
 				9217E25C2BFB9C2C00A6AD29 /* Base in Resources */,
+				928F0DE12C0CB5EA0081ED3A /* OrderB.json in Resources */,
+				928F0DDD2C0CB5850081ED3A /* OrderC.json in Resources */,
 				9217E2572BFB9C2B00A6AD29 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +296,7 @@
 				92AA59362BFFAA0F004DD1A7 /* YemekDetayViewController.swift in Sources */,
 				9217E2502BFB9C2B00A6AD29 /* AppDelegate.swift in Sources */,
 				9230C3DC2C012582006B0798 /* SepetViewModel.swift in Sources */,
+				928F0DCF2C0CA2400081ED3A /* CustomTabBarController.swift in Sources */,
 				9217E2522BFB9C2B00A6AD29 /* SceneDelegate.swift in Sources */,
 				92B951C62BFE858D006E33C5 /* YemeklerCevap.swift in Sources */,
 				9230C3DE2C012609006B0798 /* SepetCevap.swift in Sources */,
@@ -435,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.info.YemekSiparisUygulamasi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -462,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.info.YemekSiparisUygulamasi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -495,6 +523,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		928F0DD22C0CB1A00081ED3A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		92B951D22BFE8E0F006E33C5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -522,6 +558,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		928F0DD82C0CB3510081ED3A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 928F0DD22C0CB1A00081ED3A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		92B951D62BFE8E1D006E33C5 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 92B951D22BFE8E0F006E33C5 /* XCRemoteSwiftPackageReference "RxSwift" */;

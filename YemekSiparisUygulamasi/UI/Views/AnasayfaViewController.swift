@@ -123,7 +123,7 @@ extension AnasayfaViewController : UITableViewDelegate, UITableViewDataSource, Y
     func sepeteEkleTik(indexPath: IndexPath) {
         let yemek = yemeklerListesi[indexPath.row]
         print("Anasayfa: \(yemek.yemek_adi) + \(yemek.yemek_fiyat) ₺ sepete eklendi")
-        viewModel.sepetEk(
+        viewModel.sepetEkleVeyaGuncelle(
             yemek_adi: yemek.yemek_adi,
             yemek_resim_adi: yemek.yemek_resim_adi,
             yemek_fiyat: Int(yemek.yemek_fiyat)!,

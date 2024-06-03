@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jcm-jT-tpL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3yB-J1-5uQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Market-->
+        <!--Anasayfa View Controller-->
         <scene sceneID="eXz-ng-BkS">
             <objects>
                 <viewController id="49O-Ys-Hvd" customClass="AnasayfaViewController" customModule="YemekSiparisUygulamasi" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,14 +22,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Markete Hoşgeldin!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-iH-JxF">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="34.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2B-i1-yFQ">
                                         <rect key="frame" x="207" y="0.0" width="207" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle.fill" catalog="system" title="Teslimat Adresi, EV">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -40,23 +40,26 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtreler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DD-vq-fes">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh4-lE-0wy">
                                         <rect key="frame" x="207" y="0.0" width="207" height="34"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle.fill" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="btnFiltreler:" destination="49O-Ys-Hvd" eventType="touchUpInside" id="4cn-Xj-u2O"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ys3-Qh-Re7">
-                                <rect key="frame" x="0.0" y="216" width="414" height="570.5"/>
+                                <rect key="frame" x="0.0" y="216" width="414" height="597"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yemeklerHucre" rowHeight="150" id="Ve2-b2-IID" customClass="YemeklerHucre" customModule="YemekSiparisUygulamasi" customModuleProvider="target">
@@ -112,44 +115,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tb4-Mx-2Ej">
-                                <rect key="frame" x="0.0" y="786.5" width="414" height="26.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6oT-8o-8tM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="26.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-5K-Zlv">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="26.5"/>
-                                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="house" catalog="system">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZo-Tv-0Dk">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="26.5"/>
-                                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="person.crop.circle.fill" catalog="system">
-                                                    <color key="titleColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-en-xWA">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="26.5"/>
-                                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="cart" catalog="system"/>
-                                                <connections>
-                                                    <segue destination="xaE-EL-xcb" kind="show" identifier="toSepet" id="gnv-M4-MmE"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="systemIndigoColor"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </stackView>
                             <searchBar contentMode="redraw" placeholder="Arama Yap " translatesAutoresizingMaskIntoConstraints="NO" id="brz-EZ-7b8">
                                 <rect key="frame" x="0.0" y="126" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -159,27 +124,24 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Dp-4l-qFs"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="itu-3N-lPN" firstAttribute="leading" secondItem="0Dp-4l-qFs" secondAttribute="leading" id="8BP-Yx-Pfj"/>
-                            <constraint firstItem="0Dp-4l-qFs" firstAttribute="bottom" secondItem="Tb4-Mx-2Ej" secondAttribute="bottom" id="937-Zt-G3v"/>
                             <constraint firstItem="Ys3-Qh-Re7" firstAttribute="leading" secondItem="0Dp-4l-qFs" secondAttribute="leading" id="BhD-X3-ubq"/>
-                            <constraint firstItem="Tb4-Mx-2Ej" firstAttribute="leading" secondItem="0Dp-4l-qFs" secondAttribute="leading" id="F5I-GR-Wcj"/>
                             <constraint firstItem="itu-3N-lPN" firstAttribute="top" secondItem="0Dp-4l-qFs" secondAttribute="top" id="JiS-fA-Fvk"/>
-                            <constraint firstItem="0Dp-4l-qFs" firstAttribute="trailing" secondItem="Tb4-Mx-2Ej" secondAttribute="trailing" id="LSe-K6-zgI"/>
                             <constraint firstItem="brz-EZ-7b8" firstAttribute="top" secondItem="0Dp-4l-qFs" secondAttribute="top" constant="34" id="LqF-5h-cfz"/>
-                            <constraint firstItem="Tb4-Mx-2Ej" firstAttribute="top" secondItem="Ys3-Qh-Re7" secondAttribute="bottom" id="Luv-mu-X5M"/>
                             <constraint firstItem="brz-EZ-7b8" firstAttribute="leading" secondItem="0Dp-4l-qFs" secondAttribute="leading" id="Oby-4c-C2z"/>
                             <constraint firstItem="Ys3-Qh-Re7" firstAttribute="top" secondItem="JpB-F0-ll1" secondAttribute="bottom" id="Vex-GH-Ykc"/>
                             <constraint firstItem="JpB-F0-ll1" firstAttribute="leading" secondItem="0Dp-4l-qFs" secondAttribute="leading" id="gBS-Rq-v9K"/>
                             <constraint firstItem="brz-EZ-7b8" firstAttribute="trailing" secondItem="0Dp-4l-qFs" secondAttribute="trailing" id="iTh-w6-xbf"/>
                             <constraint firstItem="0Dp-4l-qFs" firstAttribute="trailing" secondItem="JpB-F0-ll1" secondAttribute="trailing" id="mav-CG-PLs"/>
                             <constraint firstItem="JpB-F0-ll1" firstAttribute="top" secondItem="brz-EZ-7b8" secondAttribute="bottom" id="oBN-qN-atF"/>
+                            <constraint firstItem="0Dp-4l-qFs" firstAttribute="bottom" secondItem="Ys3-Qh-Re7" secondAttribute="bottom" id="rA1-T3-GZO"/>
                             <constraint firstItem="0Dp-4l-qFs" firstAttribute="trailing" secondItem="itu-3N-lPN" secondAttribute="trailing" id="sXc-8K-9Wo"/>
                             <constraint firstItem="0Dp-4l-qFs" firstAttribute="trailing" secondItem="Ys3-Qh-Re7" secondAttribute="trailing" id="uXq-gu-biv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Market" id="Bkz-Zy-pbf"/>
+                    <navigationItem key="navigationItem" id="Bkz-Zy-pbf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="brz-EZ-7b8" id="Si8-IJ-3IE"/>
@@ -275,7 +237,7 @@
                             <constraint firstItem="poz-6r-xA0" firstAttribute="leading" secondItem="R6I-Z9-CzZ" secondAttribute="leading" constant="100" id="pS6-eb-Nho"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="F1G-0x-vh9"/>
+                    <navigationItem key="navigationItem" title="Ürün Detay" id="F1G-0x-vh9"/>
                     <connections>
                         <outlet property="imageViewYemek" destination="qZK-8u-Qs2" id="0Zq-Tx-CPb"/>
                         <outlet property="lblFiyat" destination="Yh6-ph-bQB" id="uRQ-br-LD4"/>
@@ -346,7 +308,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-eI-ats">
-                                <rect key="frame" x="0.0" y="92" width="414" height="563.5"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="607.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sepetHucre" rowHeight="180" id="0mK-gv-3sM" customClass="SepetHucre" customModule="YemekSiparisUygulamasi" customModuleProvider="target">
@@ -438,7 +400,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8dN-we-bwW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ciR-eI-ats" firstAttribute="leading" secondItem="8dN-we-bwW" secondAttribute="leading" id="3A6-xA-HRX"/>
                             <constraint firstItem="bZi-Fh-b3k" firstAttribute="leading" secondItem="8dN-we-bwW" secondAttribute="leading" constant="24" id="6R0-wT-NCr"/>
@@ -449,6 +411,7 @@
                             <constraint firstItem="8dN-we-bwW" firstAttribute="bottom" secondItem="bZi-Fh-b3k" secondAttribute="bottom" constant="20" id="LSY-An-hu1"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="cart.circle.fill" catalog="system" id="W80-FB-TSm"/>
                     <navigationItem key="navigationItem" title="Sepetim" id="dMt-aa-I5e"/>
                     <connections>
                         <outlet property="lblToplamFiyat" destination="IN4-rh-sTp" id="H6X-KL-McW"/>
@@ -457,12 +420,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GT4-ec-7AA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382.60869565217394" y="-276.5625"/>
+            <point key="canvasLocation" x="383" y="-248"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="1di-G7-ys6">
+            <objects>
+                <tabBarController id="3yB-J1-5uQ" customClass="CustomTabBarController" customModule="YemekSiparisUygulamasi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ysL-V1-3OO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jcm-jT-tpL" kind="relationship" relationship="viewControllers" id="B6j-7N-0jN"/>
+                        <segue destination="xaE-EL-xcb" kind="relationship" relationship="viewControllers" id="pTm-y0-4uv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voI-go-ME4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1539" y="-979"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="nlE-wc-7eQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jcm-jT-tpL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="house.circle.fill" catalog="system" id="T7u-0r-Ic5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTy-Hk-O3Q">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -479,10 +461,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="cart.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal.decrease.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
         <systemColor name="opaqueSeparatorColor">
@@ -491,8 +472,17 @@
         <systemColor name="placeholderTextColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

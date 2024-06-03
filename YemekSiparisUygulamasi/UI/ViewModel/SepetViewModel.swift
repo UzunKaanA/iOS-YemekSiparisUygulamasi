@@ -22,6 +22,4 @@ class SepetViewModel {
         arepo.sepetYukle(kullanici_adi: kullanici_adi)
     }
     
-
-    
 }

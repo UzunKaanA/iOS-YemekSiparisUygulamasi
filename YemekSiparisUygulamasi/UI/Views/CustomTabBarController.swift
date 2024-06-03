@@ -6,30 +6,13 @@
 //
 
 import UIKit
-import RxSwift
 
-class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {
-    let disposeBag = DisposeBag()
-    let repository = YemeklerRepository()
-    
+class CustomTabBarController: UITabBarController, UITabBarControllerDelegate {    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         setupTabBar()
-        observeCartItemCount()
-        
     }
-    func observeCartItemCount() {
-           repository.cartItem
-               .observe(on: MainScheduler.instance)
-               .subscribe(onNext: { [weak self] count in
-                   self?.tabBar.items?[1].badgeValue = count > 0 ? "\(count)" : nil
-               })
-               .disposed(by: disposeBag)
-           
-           // Load the initial cart items
-           repository.sepetYukle(kullanici_adi: "Kaan_Uzun") // Replace with the actual user name if needed
-       }
     
     func setupTabBar() {
         // Set the tint color for the selected tab item

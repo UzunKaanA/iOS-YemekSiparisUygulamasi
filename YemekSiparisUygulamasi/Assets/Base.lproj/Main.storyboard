@@ -31,6 +31,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle.fill" catalog="system" title="Teslimat Adresi, EV">
                                             <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnAdres:" destination="49O-Ys-Hvd" eventType="touchUpInside" id="csO-aI-juU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

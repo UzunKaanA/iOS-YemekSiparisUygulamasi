@@ -31,22 +31,60 @@ class AnasayfaViewController: UIViewController {
         })
     }
     
-    @IBAction func btnFiltreler(_ sender: Any) {
-        let alertController = UIAlertController(title: "Sort Options", message: "Choose an option to sort the list", preferredStyle: .actionSheet)
+    @IBAction func btnAdres(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: "Teslimat Adresi Seçin", preferredStyle: .actionSheet)
                 
-                let sortByNameAToZ = UIAlertAction(title: "Sort by Name A to Z", style: .default) { _ in
+                let adresler = ["EV", "İş"]
+                
+                for adres in adresler {
+                    let action = UIAlertAction(title: adres, style: .default) { _ in
+                        if let button = sender as? UIButton {
+                            button.setTitle("Teslimat Adresi, \(adres)", for: .normal)
+                            self.updateButtonImage(button, address: adres)
+                        }
+                    }
+                    alert.addAction(action)
+                }
+                
+                let cancelAction = UIAlertAction(title: "Kapat", style: .cancel, handler: nil)
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true, completion: nil)
+    }
+    
+    func updateButtonImage(_ button: UIButton, address: String) {
+            let imageName: String
+            
+            switch address {
+            case "EV":
+                imageName = "house"
+            case "İş":
+                imageName = "briefcase"
+            default:
+                imageName = "house"
+            }
+            
+            button.setImage(UIImage(systemName: imageName), for: .normal)
+            button.tintColor = .black
+        }
+    
+    
+    @IBAction func btnFiltreler(_ sender: Any) {
+        let alertController = UIAlertController(title: "Filtre Seçenekleri", message: "Bir Filtre Seçin", preferredStyle: .actionSheet)
+                
+                let sortByNameAToZ = UIAlertAction(title: "Adına Göre A - Z", style: .default) { _ in
                     self.sortYemekler(by: .nameAToZ)
                 }
-                let sortByNameZToA = UIAlertAction(title: "Sort by Name Z to A", style: .default) { _ in
+                let sortByNameZToA = UIAlertAction(title: "Adına Göre Z to A", style: .default) { _ in
                     self.sortYemekler(by: .nameZToA)
                 }
-                let sortByPriceHighToLow = UIAlertAction(title: "Sort by Price High to Low", style: .default) { _ in
+                let sortByPriceHighToLow = UIAlertAction(title: "Fiyatına Göre Azalan", style: .default) { _ in
                     self.sortYemekler(by: .priceHighToLow)
                 }
-                let sortByPriceLowToHigh = UIAlertAction(title: "Sort by Price Low to High", style: .default) { _ in
+                let sortByPriceLowToHigh = UIAlertAction(title: "Fiyatına Göre Artan", style: .default) { _ in
                     self.sortYemekler(by: .priceLowToHigh)
                 }
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                let cancelAction = UIAlertAction(title: "Kapat", style: .cancel, handler: nil)
                 
                 alertController.addAction(sortByNameAToZ)
                 alertController.addAction(sortByNameZToA)

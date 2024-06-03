@@ -14,7 +14,6 @@ class YemeklerRepository {
     var yemeklerListesi = BehaviorSubject<[Yemekler]>(value: [Yemekler]())
     var sepetYemeklerListesi = BehaviorSubject<[SepetYemekler]>(value: [SepetYemekler]())
     private var allYemekler = [Yemekler]()
-    var cartItem = BehaviorSubject<Int>(value: 0)
     
     
     func sepetEkle(yemek_adi:String, yemek_resim_adi:String, yemek_fiyat:Int, yemek_siparis_adet:Int, kullanici_adi:String){
